@@ -6,9 +6,9 @@ name: new_br
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: []
+    branches: [new_br]
   pull_request:
-    branches: []
+    branches: [new_br]
   issue_comment: 
     types: [created, edited, deleted]
 
