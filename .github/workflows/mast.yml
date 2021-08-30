@@ -4,9 +4,11 @@ name: mast
 
 # Controls when the workflow will run
 on:
+  push:
+    branches: [ main ]
   # Triggers the workflow on push or pull request events but only for the master branch
-  issue_comment:
-    types: [created, edited, deleted]
+  # issue_comment:
+  #   types: [created, edited, deleted]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,8 +29,6 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      # Debug with tmate session
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
