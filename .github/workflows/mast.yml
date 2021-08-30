@@ -2,7 +2,7 @@
 
 name: mast
 
-# Controls when the workflow will run
+# Controls when the workflow will run test
 on:
   push:
     branches: [ main ]
